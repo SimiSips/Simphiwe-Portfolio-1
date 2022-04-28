@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+        
+        .c2 {
+            position: fixed;
+            padding: 20px;
+            bottom: 0;
+            right: 0;
+        }
+        
+        .fa {
+            color: black;
+            font-size: 20px;
+        }
+        
+        .c2>ul>li {
+            list-style: none;
+            background-color: aqua;
+        }
+        
+        .nav-main>ul {
+            background-color: darkcyan;
+            display: flex;
+            justify-content: right;
+        }
+        
+        .nav-main>ul>li {
+            list-style: none;
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        .nav-main>ul>li>a {
+            color: black;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+        }
+        
+        .nav-main>ul>li:hover {
+            background-color: aquamarine;
+        }
+        
+        .container {
+            width: 60%;
+            margin: 0 auto;
+            background-color: rgb(165, 217, 226);
+            position: relative;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .one {
+            width: 150px;
+            height: 150px;
+            background-color: darkcyan;
+            position: relative;
+        }
+        
+        .two {
+            width: 150px;
+            height: 150px;
+            background-color: darkcyan;
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+        }
+        
+        .three {
+            width: 150px;
+            height: 150px;
+            background-color: blueviolet;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+        }
+        
+        .four {
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            position: absolute;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-main">
+        <ul>
+
+            <li>
+                <a href=" ">Home</a>
+            </li>
+            <li>
+                <a href=" ">About</a>
+            </li>
+            <li>
+                <a href=" ">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="parent ">
+        <div class="c1 ">
+            <h1 style="text-align: center; ">My Social links</h1>
+        </div>
+        <div class="c2 ">
+            <ul>
+                <li style="padding: 20px; "><i class="fa fa-facebook "></i></li>
+                <li style="padding: 20px; "><i class="fa fa-instagram "></i></li>
+                <li style="padding: 20px; "><i class="fa fa-twitter "></i></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container ">
+        <div class="one ">Number one</div>
+        <div class="two ">Number two</div>
+        <div class="three ">Number three</div>
+        <div class="four ">Number four</div>
+    </div>
+
+
+</body>
+
+<!-- <script src=" https://kit.fontawesome.com/bc48134920.js " crossorigin="anonymous "></script> -->
+
+</html>

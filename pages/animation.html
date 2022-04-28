@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        .move {
+            width: 150px;
+            height: 150px;
+            background-color: aquamarine;
+            position: absolute;
+            animation-name: move;
+            animation-duration: 3s;
+            animation-iteration-count: 2;
+            animation-direction: alternate-reverse;
+        }
+        
+        @keyframes move {
+            from {
+                left: 0;
+                top: 0;
+            }
+            25%,
+            75% {
+                top: 100%;
+            }
+            50% {
+                top: 50%;
+            }
+            to {
+                left: 100%;
+                top: 0;
+            }
+        }
+        
+        .bouncing {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            border-radius: 50%;
+            animation-duration: 5s;
+            animation-name: bouncing;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-timing-function: ease-in-out;
+        }
+        
+        @keyframes bouncing {
+            from {
+                transform: translateX(1000px);
+            }
+            to {
+                transform: translateX(0);
+            }
+            50% {
+                background-color: red;
+                height: 500px;
+                width: 500px;
+            }
+            75% {
+                border-radius: 0;
+            }
+        }
+        
+        .movement {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation: movement 5s linear 2s infinite alternate;
+        }
+        
+        @keyframes movement {
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+            75% {
+                background-color: green;
+                left: 0px;
+                top: 200px;
+            }
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+        
+        body {
+            overflow: hidden;
+            background: rgb(25, 35, 125);
+        }
+        
+        div.drop-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            height: 200px;
+            width: 200px;
+        }
+        
+        div.drop {
+            position: absolute;
+            top: -25%;
+            width: 100%;
+            height: 100%;
+            border-radius: 100% 5% 100% 100%;
+            transform: rotate(-45deg);
+            margin: 0px;
+            background: deepskyblue;
+            animation: drip 4s forwards;
+        }
+        
+        h1 {
+            color: white;
+            position: absolute;
+            font-size: 2.5em;
+            height: 1em;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            margin: auto;
+            text-align: center;
+            opacity: 0;
+            animation: appear 2s 2.5s forwards;
+        }
+        
+        @keyframes appear {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        div.drop-container:before,
+        div.drop-container:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 55%;
+            right: 50%;
+            transform: translate(50%) rotateX(75deg);
+            border-radius: 100%;
+            opacity: 0;
+            width: 75%;
+            height: 75%;
+            border: 5px solid skyblue;
+            animation: dripple 2s ease-out 1s;
+        }
+        
+        div.drop-container:after {
+            animation: dripple 2s ease-out 1.7s;
+        }
+        
+        @keyframes drip {
+            45% {
+                top: 0;
+                border-radius: 100% 5% 100% 100%;
+                transform: rotate(-45deg);
+            }
+            100% {
+                top: 0;
+                transform: rotate(0deg);
+                border-radius: 100%;
+            }
+        }
+        
+        @keyframes dripple {
+            0% {
+                width: 150px;
+                height: 150px;
+            }
+            25% {
+                opacity: 1;
+            }
+            100% {
+                width: 500px;
+                height: 500px;
+                top: -20%;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="move">
+
+    </div> -->
+
+    <!-- <div class="bouncing"></div> -->
+
+    <!-- <div class="movement"></div> -->
+
+    <!-- <div class="cup"></div> -->
+    <h1>Brain Cap Developers</h1>
+    <div class="drop-container">
+        <div class="drop"></div>
+    </div>
+</body>
+
+</html>

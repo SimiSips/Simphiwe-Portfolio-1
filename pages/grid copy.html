@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: rgba(0, 247, 255, 0.316);
+            gap: 1rem;
+            column-gap: 10px;
+            row-gap: 10px;
+            padding: 20px;
+            grid-template-rows: minmax(auto, auto);
+        }
+        /* .container :nth-child(even) {
+            background-color: rgba(0, 68, 255, 0.337);
+        }
+        
+        .container :nth-child(odd) {
+            background-color: rgba(0, 255, 4, 0.321);
+        } */
+        
+        .container :nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        
+        .container :nth-child(2) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        
+        .container :nth-child(3) {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        
+        .container :nth-child(4) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 4;
+        }
+        
+        .nav-main {
+            display: flex;
+            justify-content: space-around;
+            background-color: aquamarine;
+        }
+        
+        .nav>ul>li {
+            list-style: none;
+            padding: 30px;
+            font-size: 15px;
+            background-color: lightgreen;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .item-2 {
+            background-color: darkcyan;
+            position: relative;
+        }
+        
+        .services {
+            display: flex;
+        }
+        
+        .boxes {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .item-1 {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav-main">
+            <a href=""><img src="/assets/img/bcd-logo.jpg" alt="" width="50px" height="50px"></a>
+            <h1>
+                <a style="text-decoration: none;" href="https://simphiwe-radebe.netlify.app">Simphiwe Radebe</a>
+            </h1>
+        </nav>
+        <div class="item-1">
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="">Services</a>
+                    </li>
+                    <li>
+                        <a href="">Blog</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="item-2">
+            <h1 style="text-align: center;">Services</h1>
+            <div class="services">
+                <div class="boxes">
+                    <div style="background-color: black; width: 50px; height: 50px;"></div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci delectus aspernatur reiciendis, aliquam cum, inventore quae tempore maiores illo, minus exercitationem assumenda ullam! Iste, vitae consequatur sint temporibus esse
+                        non?
+                    </p>
+                </div>
+                <div class="boxes">
+                    <div style="background-color: black; width: 50px; height: 50px;"></div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci delectus aspernatur reiciendis, aliquam cum, inventore quae tempore maiores illo, minus exercitationem assumenda ullam! Iste, vitae consequatur sint temporibus esse
+                        non?
+                    </p>
+                </div>
+                <div class="boxes">
+                    <div style="background-color: black; width: 50px; height: 50px;"></div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci delectus aspernatur reiciendis, aliquam cum, inventore quae tempore maiores illo, minus exercitationem assumenda ullam! Iste, vitae consequatur sint temporibus esse
+                        non?
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="item "><i class="fa fa-copyright" aria-hidden="true"></i>&#169;Simphiwe Radebe 2022</div>
+
+    </div>
+</body>
+
+</html>
+
+</html>
