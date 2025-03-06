@@ -1,376 +1,1515 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simphiwe Radebe | Portfolio</title>
+    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a","950":"#172554"}
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s linear infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 4s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Simphiwe Radebe - Professional Web and Mobile App Developer | Full-Stack Developer | Specializing in Flutter, Android, and Responsive Web Design">
+    <meta name="keywords" content="Simphiwe Radebe, web developer, mobile app developer, full-stack developer, Flutter developer, Android developer, UI/UX design, responsive web design">
+    <meta name="author" content="Simphiwe Radebe">
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://simphiwe-radebe.netlify.app">
+    <meta property="og:title" content="Simphiwe Radebe | Web & Mobile App Developer">
+    <meta property="og:description" content="Professional web and mobile app development services. Expert in Flutter, Android, and full-stack development.">
+    <meta property="og:image" content="https://simphiweradebe.com/profile-image.jpg">
 
-    <!-- =====BOX ICONS===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <title>Simphiwe's Portfolio Github</title>
-    <link rel="icon" href="assets/img/sims.jpeg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://simphiwe-radebe.netlify.app">
+    <meta name="twitter:title" content="Simphiwe Radebe | Web & Mobile App Developer">
+    <meta name="twitter:description" content="Professional web and mobile app development services. Expert in Flutter, Android, and full-stack development.">
+    <meta name="twitter:image" content="https://simphiweradebe.com/profile-image.jpg">
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://simphiwe-radebe.netlify.app">
+
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="ZA">
+    <meta name="geo.placename" content="South Africa">
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Simphiwe Radebe",
+            "jobTitle": "Web and Mobile App Developer",
+            "skills": [
+                "Web Development",
+                "Mobile App Development",
+                "Full-Stack Development",
+                "Flutter",
+                "Android Development",
+                "UI/UX Design"
+            ],
+            "url": "https://simphiwe-radebe.netlify.app",
+            "sameAs": [
+                "https://linkedin.com/in/simphiweradebe0706",
+                "https://github.com/SimiSips"
+            ]
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        .blob {
+            animation: blob-animation 8s infinite;
+            filter: blur(40px);
+        }
+
+        @keyframes blob-animation {
+            0% {
+                border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+            }
+            50% {
+                border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+            }
+            100% {
+                border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+            }
+        }
+
+        .website-showcase {
+            perspective: 1000px;
+        }
+
+        .website-card {
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            transform-style: preserve-3d;
+        }
+
+        .website-card:hover {
+            transform: rotateY(5deg) rotateX(5deg) translateZ(10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .browser-top {
+            height: 2rem;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            padding: 0 0.75rem;
+        }
+
+        .browser-circle {
+            height: 0.75rem;
+            width: 0.75rem;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+
+        .browser-address {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 75%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .browser-frame {
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .website-card:hover .browser-frame {
+            transform: translateY(-5px);
+        }
+
+        /* App showcase styles */
+        .app-phone {
+            border-radius: 2rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 #0000, 0 0 #0000, 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .app-phone:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .article-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+
+        /* Skills bar animation */
+        .skill-progress {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: rgba(59, 130, 246, 0.5);
+            animation: skill-fill 1.5s ease-in-out forwards;
+        }
+
+        .skill-flutter::after {
+            animation-name: skill-fill-95;
+        }
+        .skill-android::after {
+            animation-name: skill-fill-70;
+        }
+        .skill-web::after {
+            animation-name: skill-fill-85;
+        }
+        .skill-uiux::after {
+            animation-name: skill-fill-75;
+        }
+
+        @keyframes skill-fill-95 {
+            to { width: 95%; }
+        }
+        @keyframes skill-fill-85 {
+            to { width: 85%; }
+        }
+        @keyframes skill-fill-75 {
+            to { width: 75%; }
+        }
+        @keyframes skill-fill-70 {
+            to { width: 70%; }
+        }
+
+        /* Typing animation */
+        .typing-effect::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { opacity: 1 }
+            50% { opacity: 0 }
+        }
+    </style>
 </head>
-
-
-<body>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">Simphiwe Radebe</a>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navbar -->
+    <header class="fixed w-full bg-white bg-opacity-90 dark:bg-gray-800 dark:bg-opacity-90 shadow-sm backdrop-blur-sm z-50 transition-colors duration-300">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <a href="#" class="text-xl font-bold text-gray-900 dark:text-white">
+                    <span class="text-primary-600">Simphiwe</span> Radebe
+                </a>
             </div>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Rates</a></li>
-                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item"></li> <i class="uil uil-moon change-theme" id="theme-button"></i>
-                </ul>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Home</a>
+                <a href="#experience" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Experience</a>
+                <a href="#rates" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Rates</a>
+                <a href="#education" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Education</a>
+                <a href="#skills" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Projects</a>
+                <a href="#media" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300">Media</a>
+                <button id="theme-toggle" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
             </div>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-        </nav>
+        </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-md transition-colors duration-300">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Experience</a>
+            <a href="#rates" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Rates</a>
+            <a href="#education" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Education</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Skills</a>
+            <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
+            <a href="#media" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">Media</a>
+            <div class="flex items-center px-3 py-2">
+                <button id="mobile-theme-toggle" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2">
+                    <svg id="mobile-theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="mobile-theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+                <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">Toggle Theme</span>
+            </div>
+        </div>
+    </div>
     </header>
 
-    <main class="l-main">
-        <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Hi, I am <span class="home__title-color"> <br> Simphiwe Radebe </span> </h1>
-                <h1>Android Developer at Standard Bank Group</h1>
-                <br><br>
-                <p class="about__text">| Software Developer | Mobile App Developer |<br> | Front-End Web Designer | UI/UX Designer | <br>| After Effects | Flutter Developer |</p>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-primary-500 opacity-20 dark:opacity-10 rounded-full blur-3xl blob -z-10"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-purple-500 opacity-20 dark:opacity-10 rounded-full blur-3xl blob -z-10"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center py-16">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <div class="text-center md:text-left">
+                    <p class="text-primary-600 font-medium mb-2 tracking-wider">WELCOME TO MY PORTFOLIO</p>
+                    <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+                        Hi, I am <span class="text-primary-600 typing-effect">Simphiwe Radebe</span>
+                    </h1>
+                    <h2 class="text-xl lg:text-2xl font-medium text-gray-700 dark:text-gray-300 mb-6">
+                        Android Developer at Standard Bank Group
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+                        | Software Developer | Mobile App Developer |<br>
+                        | Front-End Web Designer | UI/UX Designer | <br>
+                        | After Effects | Flutter Developer |
+                    </p>
+
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="mailto:simphiwe.radebe0706@gmail.com" class="bg-primary-600 text-white px-6 py-3 rounded-full font-medium shadow-lg hover:bg-primary-700 transition-colors duration-300 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                            Contact Me
+                        </a>
+                        <a href="#projects" class="bg-transparent border border-primary-600 text-primary-600 dark:text-primary-400 px-6 py-3 rounded-full font-medium hover:bg-primary-600 hover:text-white dark:hover:text-white transition-colors duration-300 flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+                            </svg>
+                            View Projects
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="home__social">
-                <a href="mailto:simphiwe.radebe0706@gmail.com@gmail.com" target="_blank" class="home__social-icon"><i class='bx bx-mail-send'></i></a>
-                <a href="https://www.linkedin.com/in/simphiwer0706/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/SimiSips" target="_blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                <a href="https://instagram.com/simphiweradebe__" target="_blank" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+            <div class="md:w-1/2 relative">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-purple-500 rounded-full blur-lg opacity-70 animate-pulse-slow"></div>
+                    <div class="absolute inset-0 bg-white dark:bg-gray-800 rounded-full overflow-hidden border-8 border-white dark:border-gray-800 shadow-xl">
+                        <img src="assets/img/sims.jpeg" alt="Simphiwe Radebe" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="absolute -bottom-2 -right-2 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg">
+                        <svg class="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mt-8 space-x-6">
+                    <a href="mailto:simphiwe.radebe0706@gmail.com" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/simphiwer0706/" target="_blank" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/SimiSips" target="_blank" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405 1.02 0 2.04.135 3 .405 2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/simphiweradebe__" target="_blank" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.897 1.382-.419.42-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#experience" class="scroll-indicator text-primary-600 dark:text-primary-400 animate-bounce">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Experience</h2>
+                <div class="h-1 w-20 bg-primary-600 mx-auto rounded-full"></div>
             </div>
 
-            <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                            <image class="home__blob-img" xlink:href="assets/img/sims.jpeg" />
-                        </g>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-colors duration-300">
+                    <div class="md:w-1/3 bg-primary-600 p-8 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-white text-5xl mb-4">
+                                <svg class="w-24 h-24 mx-auto" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.523 15.3414c-.5765 0-1.0403-.4177-1.0403-.9938 0-.5288.4638-.9938 1.0403-.9938.5766 0 1.0403.4176 1.0403.9938.0474.5761-.4638.9938-1.0403.9938m-9.6142 0c-.5765 0-1.0403-.4177-1.0403-.9938 0-.5288.4638-.9938 1.0403-.9938.5765 0 1.0402.4176 1.0402.9938 0 .5761-.4637.9938-1.0402.9938m9.9453-9.8606L15.1264 9.7254c-.142.2358-.2366.4989-.2366.7894 0 .846.6576 1.5304 1.4673 1.5304.8097 0 1.4673-.6844 1.4673-1.5304 0-.2905-.0946-.5536-.2366-.7894M12.6206 5.8032L9.8626 9.7254c-.142.2358-.2366.4989-.2366.7894 0 .846.6576 1.5304 1.4673 1.5304.8097 0 1.4673-.6844 1.4673-1.5304 0-.2905-.0947-.5536-.2367-.7894M7.4808 5.8032L4.7228 9.7254c-.142.2358-.2366.4989-.2366.7894 0 .846.6576 1.5304 1.4673 1.5304.8097 0 1.4673-.6844 1.4673-1.5304 0-.2905-.0947-.5536-.2367-.7894"/>
+                                    <path d="M21.1642 17.6955H2.8356C1.3309 17.6955 0 19.0909 0 20.5956v1.714C0 23.8143 1.3309 24 2.8356 24h18.3286C22.6691 24 24 23.8143 24 22.3096v-1.714c0-1.5047-1.3309-1.9001-2.8358-1.9001"/>
+                                    <path d="M5.6306 11.3992l2.1877-3.9803h.6175l1.5873 2.3133 1.5873-2.3133h.6175l2.1877 3.9803a2.8617 2.8617 0 01-.1754.0719c-.0439.0157-.088.0295-.1328.0423a3.4805 3.4805 0 01-.2702.0636c-.0988.0186-.1983.0316-.2983.0392-.0962.0073-.1926.0109-.289.0109-.0751 0-.1504-.0023-.2254-.0068a3.1807 3.1807 0 01-.7682-.1389c-.1145-.0414-.2271-.0912-.3367-.1494l-1.3138-2.3952-1.3138 2.3952c-.2193.1209-.4543.2132-.7011.2729a3.2275 3.2275 0 01-.354.0716c-.0647.0089-.1294.0155-.1942.0199a3.3923 3.3923 0 01-.1954.0059c-.0946 0-.189-.0036-.2837-.0105a3.2359 3.2359 0 01-.2982-.0379 3.3916 3.3916 0 01-.2763-.0622c-.0459-.0127-.0911-.0267-.136-.0427a2.9365 2.9365 0 01-.1771-.0708z" fill="#3DDC84"/>
+                                    <path d="M11.2069 1.5304c.2367-.2358.5207-.3545.8047-.3545.1893 0 .3787.0473.5681.1182l6.613 3.3099c.4258.2358.7098.6608.7098 1.1751v.1182c0 .2358-.0948.4716-.2367.6608l-.6154.8376.5207-.9558c.0948-.0944.1419-.2358.1419-.425 0-.2831-.1893-.5189-.4259-.5662L12.3058.1182c-.0948-.0472-.2367-.0944-.3314-.0944-.1893 0-.3787.0944-.5207.2358L7.0542 5.8032l.758 1.3158 3.3947-5.5886z" fill="#3DDC84"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-white text-lg font-semibold">Android Developer</h3>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Standard Bank</h3>
+                            <div class="text-primary-600 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                December 2022 - Present
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Working as an Android Developer at Standard Bank, building and maintaining
+                            mobile banking applications. Implementing new features, fixing bugs,
+                            and improving user experience across the mobile platform.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 px-3 py-1 rounded-full text-sm font-medium">Kotlin</span>
+                            <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 px-3 py-1 rounded-full text-sm font-medium">Java</span>
+                            <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 px-3 py-1 rounded-full text-sm font-medium">Android SDK</span>
+                            <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 px-3 py-1 rounded-full text-sm font-medium">Jetpack Compose</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Website Projects</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Interactive showcase of websites I've designed and developed. Hover over each to see details.
+                </p>
+                <div class="h-1 w-20 bg-primary-600 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 website-showcase">
+                <!-- Grace Bible Church Website -->
+                <div class="website-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="browser-top bg-gray-100 dark:bg-gray-700">
+                        <div class="browser-circle bg-red-500"></div>
+                        <div class="browser-circle bg-yellow-500"></div>
+                        <div class="browser-circle bg-green-500"></div>
+                        <div class="browser-address bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300">
+                            gracebiblechurch.org.za
+                        </div>
+                    </div>
+                    <div class="browser-frame relative">
+                        <iframe
+                                class="w-full h-64 border-none transform scale-100 origin-top-left"
+                                srcdoc="<div style='width:133%; height:133%; overflow:hidden;'><iframe src='https://gracebiblechurch.org.za/' style='width:100%; height:100%; border:none; transform: scale(0.75); transform-origin: 0 0;'></iframe></div>"
+                                sandbox="allow-same-origin allow-scripts"
+                                loading="lazy"
+                                title="Grace Bible Church Website">
+                        </iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 text-white">
+                                <h3 class="font-bold text-lg">Grace Bible Church</h3>
+                                <p class="text-sm">Church website with sermons, events, and ministry information</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-900 dark:text-white">Grace Bible Church</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Official church website with comprehensive features</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded text-xs">Next.js</span>
+                            <span class="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                            <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 rounded text-xs">Responsive</span>
+                        </div>
+                        <a href="https://gracebiblechurch.org.za" target="_blank" class="mt-4 inline-block text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-300">
+                            Visit Site <span class="ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tickets Website -->
+                <div class="website-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="browser-top bg-gray-100 dark:bg-gray-700">
+                        <div class="browser-circle bg-red-500"></div>
+                        <div class="browser-circle bg-yellow-500"></div>
+                        <div class="browser-circle bg-green-500"></div>
+                        <div class="browser-address bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300">
+                            tickets.gracebiblechurch.org.za
+                        </div>
+                    </div>
+                    <div class="browser-frame relative">
+                        <iframe
+                                class="w-full h-64 border-none transform scale-75 origin-top-left"
+                                srcdoc="<div style='width:133%; height:133%; overflow:hidden;'><iframe src='https://tickets.gracebiblechurch.org.za' style='width:100%; height:100%; border:none; transform: scale(0.75); transform-origin: 0 0;'></iframe></div>"
+                                sandbox="allow-same-origin allow-scripts"
+                                loading="lazy"
+                                title="GBC Tickets Website">
+                        </iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 text-white">
+                                <h3 class="font-bold text-lg">GBC Tickets</h3>
+                                <p class="text-sm">Event ticketing platform for church events</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-900 dark:text-white">GBC Tickets</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Event registration and ticketing platform</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded text-xs">Django</span>
+                            <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                            <span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 rounded text-xs">Azure</span>
+                        </div>
+                        <a href="https://tickets.gracebiblechurch.org.za" target="_blank" class="mt-4 inline-block text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-300">
+                            Visit Site <span class="ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blackcode Website -->
+                <div class="website-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="browser-top bg-gray-100 dark:bg-gray-700">
+                        <div class="browser-circle bg-red-500"></div>
+                        <div class="browser-circle bg-yellow-500"></div>
+                        <div class="browser-circle bg-green-500"></div>
+                        <div class="browser-address bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300">
+                            www.blackcode.co.za
+                        </div>
+                    </div>
+                    <div class="browser-frame relative">
+                        <iframe
+                                class="w-full h-64 border-none transform scale-75 origin-top-left"
+                                srcdoc="<div style='width:133%; height:133%; overflow:hidden;'><iframe src='https://blackcode.co.za' style='width:100%; height:100%; border:none; transform: scale(0.75); transform-origin: 0 0;'></iframe></div>"
+                                sandbox="allow-same-origin allow-scripts"
+                                loading="lazy"
+                                title="Blackcode Website">
+                        </iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 text-white">
+                                <h3 class="font-bold text-lg">Blackcode</h3>
+                                <p class="text-sm">Software development company website</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-900 dark:text-white">Blackcode</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Software development company website</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded text-xs">Django</span>
+                            <span class="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded text-xs">Tailwind CSS</span>
+                            <span class="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 rounded text-xs">Azure</span>
+                        </div>
+                        <a href="https://www.blackcode.co.za" target="_blank" class="mt-4 inline-block text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-300">
+                            Visit Site <span class="ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Luxlend Website -->
+                <div class="website-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="browser-top bg-gray-100 dark:bg-gray-700">
+                        <div class="browser-circle bg-red-500"></div>
+                        <div class="browser-circle bg-yellow-500"></div>
+                        <div class="browser-circle bg-green-500"></div>
+                        <div class="browser-address bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300">
+                            www.luxlend.co.za
+                        </div>
+                    </div>
+                    <div class="browser-frame relative">
+                        <iframe
+                                class="w-full h-64 border-none transform scale-75 origin-top-left"
+                                srcdoc="<div style='width:133%; height:133%; overflow:hidden;'><iframe src='https://luxlend.co.za' style='width:100%; height:100%; border:none; transform: scale(0.75); transform-origin: 0 0;'></iframe></div>"
+                                sandbox="allow-same-origin allow-scripts"
+                                loading="lazy"
+                                title="Luxlend Website">
+                        </iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 text-white">
+                                <h3 class="font-bold text-lg">Luxlend</h3>
+                                <p class="text-sm">eCommerce site for luxury goods</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-900 dark:text-white">Luxlend</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Luxury goods eCommerce platform</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-2 py-1 rounded text-xs">Azure</span>
+                            <span class="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-2 py-1 rounded text-xs">Django</span>
+                        </div>
+                        <a href="https://www.luxlend.co.za" target="_blank" class="mt-4 inline-block text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-300">
+                            Visit Site <span class="ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KleanFit Website -->
+                <div class="website-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="browser-top bg-gray-100 dark:bg-gray-700">
+                        <div class="browser-circle bg-red-500"></div>
+                        <div class="browser-circle bg-yellow-500"></div>
+                        <div class="browser-circle bg-green-500"></div>
+                        <div class="browser-address bg-white dark:bg-gray-600 text-gray-600 dark:text-gray-300">
+                            www.kleanfit.co.za
+                        </div>
+                    </div>
+                    <div class="browser-frame relative">
+                        <iframe
+                                class="w-full h-64 border-none transform scale-75 origin-top-left"
+                                srcdoc="<div style='width:133%; height:133%; overflow:hidden;'><iframe src='https://www.kleanfit.co.za' style='width:100%; height:100%; border:none; transform: scale(0.75); transform-origin: 0 0;'></iframe></div>"
+                                sandbox="allow-same-origin allow-scripts"
+                                loading="lazy"
+                                title="KleanFit Website">
+                        </iframe>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-70 transition-opacity duration-300 flex items-end">
+                            <div class="p-4 text-white">
+                                <h3 class="font-bold text-lg">KleanFit</h3>
+                                <p class="text-sm">Fitness and nutrition website</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-gray-900 dark:text-white">KleanFit</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Fitness training and nutrition website</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded text-xs">HTML</span>
+                            <span class="bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 px-2 py-1 rounded text-xs">CSS</span>
+                            <span class="bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 px-2 py-1 rounded text-xs">JS</span>
+                        </div>
+                        <a href="https://www.kleanfit.co.za" target="_blank" class="mt-4 inline-block text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-300">
+                            Visit Site <span class="ml-1">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Development Section -->
+    <section id="apps" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Mobile App Development</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    A showcase of mobile applications I've developed for iOS and Android platforms.
+                </p>
+                <div class="h-1 w-20 bg-primary-600 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+                <!-- iOS App -->
+                <div class="flex flex-col items-center max-w-xs">
+                    <div class="app-phone bg-black w-64 h-auto p-3 mb-6">
+                        <div class="w-full h-full overflow-hidden rounded-xl">
+                            <img src="assets/img/screen1.jpeg" alt="GBC App iOS" class="w-full object-cover" />
+                        </div>
+                        <div class="absolute top-1 inset-x-0 mx-auto w-24 h-6 bg-black rounded-b-xl"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Grace Bible Church App</h3>
+                    <p class="text-center text-gray-600 dark:text-gray-400 mb-4">iOS Version</p>
+                    <div class="flex flex-wrap justify-center gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">Swift</span>
+                        <span class="bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200 px-3 py-1 rounded-full text-sm font-medium">Flutter</span>
+                    </div>
+                    <a href="https://apps.apple.com/za/app/grace-bible-church-mobile-app/id6477747282" target="_blank" class="text-white bg-gray-900 hover:bg-gray-800 px-6 py-2 rounded-full font-medium flex items-center gap-2 transition-colors duration-300">
+                        <svg class="w-5 h-5" viewBox="0 0 305 305" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z"></path>
+                            <path d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z"></path>
+                        </svg>
+                        App Store
+                    </a>
+                </div>
+
+                <!-- Android App -->
+                <div class="flex flex-col items-center max-w-xs">
+                    <div class="app-phone bg-black w-64 h-auto p-3 mb-6">
+                        <div class="w-full h-full overflow-hidden rounded-xl">
+                            <img src="assets/img/screen2.jpeg" alt="GBC App Android" class="w-full object-cover" />
+                        </div>
+                        <div class="absolute bottom-1 inset-x-0 mx-auto w-16 h-1 bg-white rounded-full"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Grace Bible Church App</h3>
+                    <p class="text-center text-gray-600 dark:text-gray-400 mb-4">Android Version</p>
+                    <div class="flex flex-wrap justify-center gap-2 mb-4">
+                        <span class="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 px-3 py-1 rounded-full text-sm font-medium">Kotlin</span>
+                        <span class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">Flutter</span>
+                    </div>
+                    <a href="https://play.google.com/store/apps/details?id=za.org.gracebiblechurch.app.gbc_app_flutter_new" target="_blank" class="text-white bg-primary-600 hover:bg-primary-700 px-6 py-2 rounded-full font-medium flex items-center gap-2 transition-colors duration-300">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.609 1.814L13.792 12 3.61 22.186c-.18.18-.301.43-.301.7v-.002c0 .135.027.27.08.39.107.254.304.456.556.57l.002.001 9.49 5.45c.93.54 2.104-.146 2.108-1.252l.002-15.068L24 12c0-.69-.845-1.045-1.35-1.548l-6.986-7.013c.277-4.588-4.922-6.745-7.155-3.185L3.61 1.814z"/>
+                        </svg>
+                        Google Play
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <a href="#" class="text-primary-600 dark:text-primary-400 font-medium border-b-2 border-primary-600 dark:border-primary-400 inline-flex items-center hover:text-primary-800 dark:hover:text-primary-300 transition-colors duration-300">
+                    View More App Projects
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                     </svg>
-
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="about section " id="experience">
-            <h2 class="section-title">Experience</h2>
+    <!-- Rates Section -->
+    <section id="rates" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Service Rates</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Transparent pricing for my development services.
+                </p>
+                <div class="h-1 w-20 bg-primary-600 mx-auto rounded-full mt-4"></div>
+            </div>
 
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/android.jpg" alt="">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Mobile App Development -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="bg-primary-600 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Mobile App Development</h3>
+                        <div class="text-3xl font-bold">R1,200<span class="text-base font-normal">/hour</span></div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Minimum 2 hours of work</p>
+                        <ul class="text-gray-700 dark:text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                iOS & Android development
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Native or Flutter apps
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                UI/UX design included
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                App store deployment
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
+                <!-- Basic Website -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="bg-purple-600 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Basic Website</h3>
+                        <div class="text-3xl font-bold">R750<span class="text-base font-normal">/page</span></div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Minimum 3 pages</p>
+                        <ul class="text-gray-700 dark:text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Responsive design
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Basic SEO
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Contact form
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Mobile-friendly
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <p class="font-bold text-gray-900 dark:text-white">From R2,250</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Website -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="bg-blue-600 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Professional Website</h3>
+                        <div class="text-3xl font-bold">R850<span class="text-base font-normal">/page</span></div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Up to 15 pages</p>
+                        <ul class="text-gray-700 dark:text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                E-commerce functionality
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Advanced SEO
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Content management
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Google Analytics
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <p class="font-bold text-gray-900 dark:text-white">From R3,850</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise Website -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="bg-indigo-600 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Enterprise Website</h3>
+                        <div class="text-3xl font-bold">R950<span class="text-base font-normal">/page</span></div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Unlimited pages</p>
+                        <ul class="text-gray-700 dark:text-gray-300 space-y-3">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                High-end functionalities
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Premium SEO & Support
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Custom backend systems
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                                Ongoing maintenance
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                            <p class="font-bold text-gray-900 dark:text-white">From R5,250</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="mailto:simphiwe.radebe0706@gmail.com" class="bg-primary-600 text-white px-8 py-3 rounded-full font-medium shadow-lg hover:bg-primary-700 transition-colors duration-300 inline-flex items-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                    </svg>
+                    Request Custom Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Education</h2>
+                <div class="h-1 w-20 bg-primary-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-12">
+                <!-- Information Systems -->
+                <div class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="md:w-1/3 bg-primary-600 p-6 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-white text-4xl mb-4">
+                                <svg class="w-20 h-20 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-white text-lg font-semibold">Eduvos</h3>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Information Systems (Software Development)</h3>
+                            <div class="text-primary-600 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                March 2024 - Present
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Currently pursuing a degree in Information Systems with a focus on software development.
+                            This program covers full-stack development, database management, system analysis, and software engineering principles.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Self-taught -->
+                <div class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="md:w-1/3 bg-purple-600 p-6 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-white text-4xl mb-4">
+                                <svg class="w-20 h-20 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-white text-lg font-semibold">Self-taught</h3>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Software Developer</h3>
+                            <div class="text-purple-600 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                August 2017 - Present
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Self-taught in various programming languages and technologies through online courses, tutorials,
+                            documentation, and personal projects. This continuous learning approach has allowed me to stay current with
+                            emerging technologies and industry best practices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- High School -->
+                <div class="flex flex-col md:flex-row bg-gray-50 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <div class="md:w-1/3 bg-blue-600 p-6 flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-white text-4xl mb-4">
+                                <svg class="w-20 h-20 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-white text-lg font-semibold">High School</h3>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Grade 12 - Matric</h3>
+                            <div class="text-blue-600 font-medium flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                January 2016 - December 2020
+                            </div>
+                        </div>
+                        <p class="text-gray-700 dark:text-gray-300">
+                            Completed my high school education at Hoerskool Diversity High School.
+                            During this time, I developed an interest in technology and began exploring programming
+                            and web development as extracurricular activities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Skills & Expertise</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    My technical skills and competencies in various programming languages and technologies.
+                </p>
+                <div class="h-1 w-20 bg-primary-600 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h1>Android Developer</h1>
-                    <span class="qualification__subtitle">Standard Bank</span>
-                    <div class="qualificaation__calendar">
-                        <i class="uil uil-calendar-alt"></i> December 2022 - Current
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Flutter Development</h3>
+                            <span class="text-primary-600 font-bold">95%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
+                            <div class="skill-progress skill-flutter bg-primary-600 h-full rounded-full"></div>
+                        </div>
+                    </div>
 
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Android Development</h3>
+                            <span class="text-primary-600 font-bold">70%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
+                            <div class="skill-progress skill-android bg-primary-600 h-full rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Web Development</h3>
+                            <span class="text-primary-600 font-bold">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
+                            <div class="skill-progress skill-web bg-primary-600 h-full rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">UI/UX Design</h3>
+                            <span class="text-primary-600 font-bold">75%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden">
+                            <div class="skill-progress skill-uiux bg-primary-600 h-full rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <div class="text-primary-600 text-3xl mb-2">
+                            <svg class="w-12 h-12 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.523 15.3414c-.5765 0-1.0403-.4177-1.0403-.9938 0-.5288.4638-.9938 1.0403-.9938.5766 0 1.0403.4176 1.0403.9938.0474.5761-.4638.9938-1.0403.9938m-9.6142 0c-.5765 0-1.0403-.4177-1.0403-.9938 0-.5288.4638-.9938 1.0403-.9938.5765 0 1.0402.4176 1.0402.9938 0 .5761-.4637.9938-1.0402.9938m9.9453-9.8606L15.1264 9.7254c-.142.2358-.2366.4989-.2366.7894 0 .846.6576 1.5304 1.4673 1.5304.8097 0 1.4673-.6844 1.4673-1.5304 0-.2905-.0946-.5536-.2366-.7894M12.6206 5.8032L9.8626 9.7254c-.142.2358-.2366.4989-.2366.7894 0 .846.6576 1.5304 1.4673 1.5304.8097 0 1.4673-.6844 1.4673-1.5304 0-.2905-.0947-.5536-.2367-.7894M7.4808 5.8032L4.7228 9.7254c-.142.2358-.2366.4989-.2366.7894 0 .846.6576 1.5304 1.4673 1.5304.8097 0 1.4673-.6844 1.4673-1.5304 0-.2905-.0947-.5536-.2367-.7894"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Android</h3>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <div class="text-blue-500 text-3xl mb-2">
+                            <svg class="w-12 h-12 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.314 0L2.3 12 6 15.7 21.684.00005 14.314 0z"/>
+                                <path d="M8.954 14.7L2.3 21.364l4.675 2.618 10.767-10.766-8.788 1.484z"/>
+                                <path fill="currentColor" d="M20.271 7.223l-3.186 3.185 3.186 3.185 3.186-3.185-3.186-3.185zM5.028 24V14.7l-2.728 2.655L5.028 24z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">Flutter</h3>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <div class="text-yellow-500 text-3xl mb-2">
+                            <svg class="w-12 h-12 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">JavaScript</h3>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <div class="text-blue-600 text-3xl mb-2">
+                            <svg class="w-12 h-12 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.396.435-.79.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">React</h3>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                        <div class="text-orange-500 text-3xl mb-2">
+                            <svg class="w-12 h-12 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531V9.75z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">HTML5</h3>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!--==== Past Work Experience ====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Previous Work</h2>
-            <div class="work__container bd-grid">
-                <div class="work__item">
-                    <a href="https://gracebiblechurch.org.za/" class="work__link work__link-custom">
-                        <img src="assets/img/gbcweb.png" alt="Grace Bible Church Website" class="work__img work__img-custom">
-                        Grace Bible Church - Website
-                    </a>
-                </div>
-                <div class="work__item">
-                    <a href="https://blackcode.co.za/" class="work__link work__link-custom">
-                        <img src="assets/img/blackcode.png" alt="Blackcode Website" class="work__img work__img-custom">
-                        Blackcode - Website
-                    </a>
-                </div>
-                <div class="work__item">
-                    <a href="https://luxlend.co.za/" class="work__link work__link-custom">
-                        <img src="assets/img/luxlend.png" alt="Luxlend eCommerce Site" class="work__img work__img-custom">
-                        Luxlend eCommerce Site
-                    </a>
-                </div>
-                <div class="work__item">
-                    <a href="https://play.google.com/store/apps/details?id=za.org.gracebiblechurch.app.gbc_app_flutter_new" class="work__link work__link-custom">
-                        <img src="assets/img/gbcappandroid.png" alt="Grace Bible Church Mobile App (Android)" class="work__img work__img-custom">
-                        Grace Bible Church Mobile App (Android)
-                    </a>
-                </div>
-                <div class="work__item">
-                    <a href="#" class="work__link work__link-custom">
-                        <img src="assets/img/gbcappios.png" alt="Grace Bible Church Mobile App (iOS)" class="work__img work__img-custom">
-                        Grace Bible Church Mobile App (iOS)
-                    </a>
+    <!-- Media Section -->
+    <section id="media" class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Media Features</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                    Press coverage, interviews, and articles about my work and achievements.
+                </p>
+                <div class="h-1 w-20 bg-primary-600 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <!-- Video Features -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold mb-8 text-center">Video Interviews</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <div class="shadow-lg rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-600">
+                            <iframe class="w-full h-64" src="https://www.youtube.com/embed/r7KPmzzvrp4" title="Next Elon Musk Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">The Next Elon Musk</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Interview with eTV News discussing innovative technologies and future aspirations.
+                            </p>
+                            <span class="inline-block bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 px-3 py-1 rounded-full text-sm font-medium">eTV News</span>
+                        </div>
+                    </div>
+
+                    <div class="shadow-lg rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-600">
+                            <iframe class="w-full h-64" src="https://www.youtube.com/embed/kF0SlCdDIQg" title="Innovative App Report Potholes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Innovative App to Report Potholes</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Feature on the Roade app for reporting road infrastructure issues.
+                            </p>
+                            <span class="inline-block bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 px-3 py-1 rounded-full text-sm font-medium">eTV News</span>
+                        </div>
+                    </div>
+
+                    <div class="shadow-lg rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-600">
+                            <iframe class="w-full h-64" src="https://www.youtube.com/embed/8Ql-g1IapPg" title="Innovation Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Technology Innovation</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">
+                                Discussion on young tech innovators and building solutions for everyday problems.
+                            </p>
+                            <span class="inline-block bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 px-3 py-1 rounded-full text-sm font-medium">eTV Interview</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-            <h2 class="section-title">Rates</h2>
-            <div class="rates__container bd-grid">
-                <div class="rates">
-                    <h3 class="rates__title">Mobile App Development</h3>
-                    <p class="rates__info">R850 per hour, minimum 2 hours</p>
-                </div>
-                <div class="rates">
-                    <h3 class="rates__title">Basic Website</h3>
-                    <p class="rates__info">R750 per page, minimum 3 pages</p>
-                    <ul class="rates__list">
-                        <li>Responsive design</li>
-                        <li>Basic SEO</li>
-                    </ul>
-                    <span class="rates__amount">From R2250</span>
-                </div>
-                <div class="rates">
-                    <h3 class="rates__title">Professional Website</h3>
-                    <p class="rates__info">R750 per page, minimum 3 pages</p>
-                    <ul class="rates__list">
-                        <li>Up to 15 pages</li>
-                        <li>E-commerce functionality</li>
-                        <li>Advanced SEO</li>
-                    </ul>
-                    <span class="rates__amount">From R2250</span>
-                </div>
-                <div class="rates">
-                    <h3 class="rates__title">Enterprise Website</h3>
-                    <p class="rates__info">R750 per page, minimum 3 pages</p>
-                    <ul class="rates__list">
-                        <li>Unlimited pages</li>
-                        <li>High-end functionalities</li>
-                        <li>Premium SEO & Support</li>
-                    </ul>
-                    <span class="rates__amount">From R2250</span>
-                </div>
-            </div>
-        </section>
-
-        <!--===== Education =====-->
-        <section class="about section " id="education">
-            <h2 class="section-title">Education</h2>
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/web.jpeg" alt="">
-                </div>
-
-                <div>
-                    <h1>Information Systems (Software Development)</h1>
-                    <span class="qualification__subtitle">Eduvos</span>
-                    <div class="qualificaation__calendar">
-                        <i class="uil uil-calendar-alt"></i> March 2024 - Current
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about section " id="education">
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/edu2.jpg" alt="">
-                </div>
-
-                <div>
-                    <h1>Software Developer</h1>
-                    <span class="qualification__subtitle">Self-taught</span>
-                    <div class="qualificaation__calendar">
-                        <i class="uil uil-calendar-alt"></i> August 2017 - Current
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about section " id="education">
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/edu1.jpg" alt="">
-                </div>
-
-                <div>
-                    <h1>Grade 12 </h1>
-                    <span class="qualification__subtitle">Hoerskool Diversity High School</span>
-                    <div class="qualificaation__calendar">
-                        <i class="uil uil-calendar-alt"></i> January, 2020 - December, 2020
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="about section " id="education">
-
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/edu.JPG" alt="">
-                </div>
-
-                <div>
-                    <h1>Grade 8 - 11</h1>
-                    <span class="qualification__subtitle">Hoerskool Diversity High School</span>
-                    <div class="qualificaation__calendar">
-                        <i class="uil uil-calendar-alt"></i> January, 2016 - December, 2019
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Professional Skills</h2>
-                    <p class="skills__text">Computer Programmer | Skilled with Programming Languages | Full Stack Web and Android Application Developer </p>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class='bx bxl-react skills__icon'></i> -->
-                            <span class="skills__name">Flutter Developer</span>
-                        </div>
-                        <div class="skills__bar skills__html">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">95%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class='bx bxl-html5 skills__icon'></i> -->
-                            <span class="skills__name">Android Development</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">70%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class='bx bxl-javascript skills__icon' ></i> -->
-                            <span class="skills__name">Web Devlopment</span>
-                        </div>
-                        <div class="skills__bar skills__js">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class='bx bxs-paint skills__icon'></i> -->
-                            <span class="skills__name">UI/UX Design</span>
-                        </div>
-                        <div class="skills__bar skills__ux">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">75%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                </div>
-            </div>
+            <!-- News Articles -->
             <div>
-                <h2 class="section-title">Videos</h2>
-                <iframe style="margin: 0 auto;" width="560" height="315" src="https://www.youtube.com/embed/r7KPmzzvrp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/kF0SlCdDIQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/8Ql-g1IapPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3 class="text-2xl font-bold mb-8 text-center">News Articles</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="article-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md">
+                        <div class="p-1 bg-primary-600"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-xs font-medium px-2.5 py-0.5 rounded">The Citizen</span>
+                                <span class="text-gray-500 dark:text-gray-400 text-sm ml-auto">September 6, 2024</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Simphiwe and Teammate Win at Bxrderless Hackathon</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                                Coverage of the winning solution at the Bxrderless Hackathon, demonstrating innovative problem-solving skills.
+                            </p>
+                            <a href="https://www.citizen.co.za/southern-courier/news-headlines/local-news/2024/09/06/simphiwe-and-his-teammate-win-at-bxrderless-hackathon/" target="_blank" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium inline-flex items-center">
+                                Read Article
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md">
+                        <div class="p-1 bg-primary-600"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-xs font-medium px-2.5 py-0.5 rounded">The Citizen</span>
+                                <span class="text-gray-500 dark:text-gray-400 text-sm ml-auto">December 18, 2023</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Radebe Solves Water Wastage</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                                Article on Simphiwe's innovative solution to address water conservation issues through technology.
+                            </p>
+                            <a href="https://www.citizen.co.za/southern-courier/news-headlines/local-news/2023/12/18/radebe-solves-water-wastage/" target="_blank" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium inline-flex items-center">
+                                Read Article
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md">
+                        <div class="p-1 bg-primary-600"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-xs font-medium px-2.5 py-0.5 rounded">The Citizen</span>
+                                <span class="text-gray-500 dark:text-gray-400 text-sm ml-auto">September 26, 2020</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Simphiwe Develops Another App</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                                Feature on Simphiwe's continued innovation in mobile app development and solving community challenges.
+                            </p>
+                            <a href="https://www.citizen.co.za/southern-courier/news-headlines/2020/09/26/simphiwe-develops-another-app/" target="_blank" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium inline-flex items-center">
+                                Read Article
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md">
+                        <div class="p-1 bg-primary-600"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-xs font-medium px-2.5 py-0.5 rounded">The Citizen</span>
+                                <span class="text-gray-500 dark:text-gray-400 text-sm ml-auto">September 25, 2019</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Young Tech Wiz Builds School Website</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                                Story about Simphiwe's early achievements in web development, creating a website for his school.
+                            </p>
+                            <a href="https://www.citizen.co.za/southern-courier/news-headlines/2019/09/25/young-tech-wiz-builds-school-website/" target="_blank" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium inline-flex items-center">
+                                Read Article
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md">
+                        <div class="p-1 bg-primary-600"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-xs font-medium px-2.5 py-0.5 rounded">eTV News</span>
+                                <span class="text-gray-500 dark:text-gray-400 text-sm ml-auto">February 15, 2023</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">The Next Elon Musk</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                                Profile on Simphiwe's entrepreneurial journey and vision for technology innovation in South Africa.
+                            </p>
+                            <a href="https://www.etv.co.za/news/next-elon-musk" target="_blank" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium inline-flex items-center">
+                                Read Article
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="article-card bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md">
+                        <div class="p-1 bg-primary-600"></div>
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary-100 text-primary-800 dark:bg-primary-900 dark:text-primary-200 text-xs font-medium px-2.5 py-0.5 rounded">eTV News</span>
+                                <span class="text-gray-500 dark:text-gray-400 text-sm ml-auto">July 30, 2022</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">Innovative App to Report Potholes</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                                Coverage of the Roade app launch, designed to help communities report infrastructure issues.
+                            </p>
+                            <a href="https://www.etv.co.za/news/innovative-app-report-potholes" target="_blank" class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-300 font-medium inline-flex items-center">
+                                Read Article
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="#" class="text-primary-600 dark:text-primary-400 font-medium border-b-2 border-primary-600 dark:border-primary-400 inline-flex items-center hover:text-primary-800 dark:hover:text-primary-300 transition-colors duration-300">
+                        View All Media Features
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <div>
-                <h2 class="section-title">Images</h2>
-                <img src="assets/img/TOP15YG-Winners Simphiwe Radebe.jpg" alt="" height="20%" width="50%">
-            </div>
-        </section>
 
-        <!--===== PROJECTS =====-->
+        </div>
+    </section>
 
-        <section class="work section" id="projects">
-            <h2 class="section-title">Projects</h2>
-
-            <div class="work__container bd-grid">
-                <div class="work__img">
-                    <div class="btn-wrap js-letter">
-                        <a class="btn" href="" target="_blank">
-                            <h2>Diversity High School App</h2>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Simphiwe Radebe</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6 max-w-md">
+                        Software developer specializing in mobile app development, web design, and UI/UX.
+                        Creating innovative digital solutions to solve everyday problems.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="mailto:simphiwe.radebe0706@gmail.com" class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/simphiwer0706/" target="_blank" class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/SimiSips" target="_blank" class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405 1.02 0 2.04.135 3 .405 2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/simphiweradebe__" target="_blank" class="text-gray-500 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.897 1.382-.419.42-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                            </svg>
                         </a>
                     </div>
-                    <img src="assets/img/Diversity.png" alt="Diversity High School App">
                 </div>
-                <div class="work__img">
-                    <div class="btn-wrap js-letter">
-                        <a class="btn" href="" target="_blank">
-                            <h2>Healthify App</h2>
-                        </a>
-                    </div>
-                    <img src="assets/img/Healthify.png" alt="Healthify App">
+
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Home</a></li>
+                        <li><a href="#experience" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Experience</a></li>
+                        <li><a href="#rates" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Rates</a></li>
+                        <li><a href="#education" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Education</a></li>
+                        <li><a href="#skills" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Skills</a></li>
+                        <li><a href="#projects" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Projects</a></li>
+                        <li><a href="#media" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Media</a></li>
+                        <li><a href="#contact" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="work__img">
-                    <div class="btn-wrap js-letter">
-                        <a class="btn" href="" target="_blank">
-                            <h2>Roade App</h2>
-                        </a>
-                    </div>
-                    <img src="assets/img/Roade.png" alt="Roade App">
+
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Mobile App Development</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Web Development</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Flutter Development</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300">Android Development</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Simphiwe Radebe </p>
-            <div class="footer__social">
-                <a href="mailto:simphiwe.radebe0706@gmail.com" target="_blank" class="footer__icon"><i class='bx bx-mail-send'></i></a>
-                <a href="https://www.linkedin.com/in/simphiwer0706/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
-                <a href="https://github.com/SimiSips" target="_blank" class="footer__icon"><i class='bx bxl-github'></i></a>
-                <a href="https://instagram.com/simphiweradebe__" target="_blank" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-600 dark:text-gray-400">© 2025 Simphiwe Radebe. All rights reserved.</p>
             </div>
-            <p>&#169; 2024 Copyright All Right Reserved by Simphiwe Radebe</p>
-        </footer>
-
-
-
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
+        </div>
+    </footer>
 </body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Theme toggle icons
+            const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+            const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+            const mobileThemeToggleDarkIcon = document.getElementById('mobile-theme-toggle-dark-icon');
+            const mobileThemeToggleLightIcon = document.getElementById('mobile-theme-toggle-light-icon');
 
+            // Force dark mode by default - this is the key change
+            localStorage.setItem('color-theme', 'dark');
+            document.documentElement.classList.add('dark');
+
+            // Show/hide the correct icons
+            themeToggleDarkIcon.classList.add('hidden');
+            themeToggleLightIcon.classList.remove('hidden');
+            if (mobileThemeToggleDarkIcon && mobileThemeToggleLightIcon) {
+                mobileThemeToggleDarkIcon.classList.add('hidden');
+                mobileThemeToggleLightIcon.classList.remove('hidden');
+            }
+
+            // Theme toggle functionality
+            function toggleTheme() {
+                if (localStorage.getItem('color-theme') === 'dark') {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                    themeToggleDarkIcon.classList.remove('hidden');
+                    themeToggleLightIcon.classList.add('hidden');
+                    if (mobileThemeToggleDarkIcon && mobileThemeToggleLightIcon) {
+                        mobileThemeToggleDarkIcon.classList.remove('hidden');
+                        mobileThemeToggleLightIcon.classList.add('hidden');
+                    }
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                    themeToggleDarkIcon.classList.add('hidden');
+                    themeToggleLightIcon.classList.remove('hidden');
+                    if (mobileThemeToggleDarkIcon && mobileThemeToggleLightIcon) {
+                        mobileThemeToggleDarkIcon.classList.add('hidden');
+                        mobileThemeToggleLightIcon.classList.remove('hidden');
+                    }
+                }
+            }
+
+            // Add event listeners to theme toggle buttons
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', toggleTheme);
+            }
+
+            if (mobileThemeToggleBtn) {
+                mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+            }
+        });
+        // This would normally be included in the main JS file
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu functionality
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Theme toggling functionality would be here
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const typingElement = document.querySelector('.typing-effect');
+            const originalText = typingElement.textContent;
+            typingElement.textContent = '';
+
+            let i = 0;
+            function typeWriter() {
+                if (i < originalText.length) {
+                    typingElement.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            }
+
+            // Start typing animation after page load
+            setTimeout(typeWriter, 1000);
+        });
+    </script>
 </html>
+
+
+
+<!--    &lt;!&ndash; CSS required for this section &ndash;&gt;-->
+<!--    <style>-->
+<!--        .website-showcase {-->
+<!--            perspective: 1000px;-->
+<!--        }-->
+
+<!--        .website-card {-->
+<!--            transition: transform 0.5s ease, box-shadow 0.5s ease;-->
+<!--            transform-style: preserve-3d;-->
+<!--        }-->
+
+<!--        .website-card:hover {-->
+<!--            transform: rotateY(5deg) rotateX(5deg) translateZ(10px);-->
+<!--            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);-->
+<!--        }-->
+
+<!--        .browser-top {-->
+<!--            height: 2rem;-->
+<!--            border-top-left-radius: 0.5rem;-->
+<!--            border-top-right-radius: 0.5rem;-->
+<!--            display: flex;-->
+<!--            align-items: center;-->
+<!--            padding: 0 0.75rem;-->
+<!--        }-->
+
+<!--        .browser-circle {-->
+<!--            height: 0.75rem;-->
+<!--            width: 0.75rem;-->
+<!--            border-radius: 50%;-->
+<!--            margin-right: 0.5rem;-->
+<!--        }-->
+
+<!--        .browser-address {-->
+<!--            font-size: 0.75rem;-->
+<!--            padding: 0.25rem 0.75rem;-->
+<!--            border-radius: 0.25rem;-->
+<!--            margin-left: auto;-->
+<!--            margin-right: auto;-->
+<!--            max-width: 75%;-->
+<!--            white-space: nowrap;-->
+<!--            overflow: hidden;-->
+<!--            text-overflow: ellipsis;-->
+<!--        }-->
+
+<!--        .browser-frame {-->
+<!--            border-bottom-left-radius: 0.5rem;-->
+<!--            border-bottom-right-radius: 0.5rem;-->
+<!--            overflow: hidden;-->
+<!--            transition: transform 0.3s ease;-->
+<!--        }-->
+
+<!--        .website-card:hover .browser-frame {-->
+<!--            transform: translateY(-5px);-->
+<!--        }-->
+<!--    </style>-->
